@@ -1,0 +1,8 @@
+Lab Creation Workflow
+
+1. enter lab name
+2. enter technology
+3. [github api] - how to integrate with github from node app. Use returned lab url
+4. persist lab details above to mongo
+
+---
