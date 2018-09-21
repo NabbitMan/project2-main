@@ -1,0 +1,25 @@
+apt-get install python3-venv
+cd PROJECT_DIR
+python3 -m venv venv
+. venv/bin/activate
+pip install --upgrade pip
+pip install Django
+
+# Verify Django Installation
+
+python
+import django
+print(django.get_version())
+
+# Check which version of Django is installed
+
+python -m django --version
+
+
+# Creating a project
+
+django-admin startproject mysite
+cd mysite
+python manage.py runserver
+
+
