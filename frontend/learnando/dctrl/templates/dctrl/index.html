@@ -1,0 +1,9 @@
+{% if image_list %}
+    <ul>
+    {% for i in image_list %}
+        <li>{{ i }}&nbsp;&nbsp;<a target='_blank' href="/dctrl/{{i}}/start/">Start</a>&nbsp;&nbsp;<a href="/dctrl/{{i}}/stop/">Stop</a></li>        
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Images are available.</p>
+{% endif %}

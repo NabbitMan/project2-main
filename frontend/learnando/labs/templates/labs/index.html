@@ -1,0 +1,14 @@
+{% if lab_list %}
+    <ul>
+    {% for lab in lab_list %}
+        <li><a href="/labs/{{ lab.lab_id }}/">{{ lab.lab_name }}</a>&nbsp;&nbsp;<button onclick="start_container('{{ lab.lab_id }}')">Start</button></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No labs are available.</p>
+{% endif %}
+<script>
+    function start_container(lab_id){
+        alert(lab_id);
+    }
+</script>
