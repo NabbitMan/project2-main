@@ -22,4 +22,50 @@ django-admin startproject mysite
 cd mysite
 python manage.py runserver
 
+# To allow app to be accessible from any host on port 3000
 
+python manage.py runserver 0:3000
+
+# To create a top level app
+
+python manage.py startapp polls
+
+
+# Let your project know about your app including the app name in INSTALLED_APPS inside settings.py 
+
+# Create a model
+
+# Activate the model
+
+python manage.py makemigrations polls
+
+# Check what migrations will occur i.e. view the SQL
+
+python manage.py sqlmigrate polls 0001
+
+# Perform the actual migration
+
+python manage.py migrate
+
+
+# So, Basically the three-step guide to making model changes:
+
+# Change your models (in models.py).
+# Run python manage.py makemigrations to create migrations for those changes
+# Run python manage.py migrate to apply those changes to the database.
+
+# To play with the DB API
+
+python manage.py shell
+
+# Creating a superuser
+
+python manage.py createsuperuser
+python manage.py runserver 0:3000
+localhost:3000/admin
+
+# To allow models from our app to be managed via the admin site, register that model on polls/admin.py
+    
+
+
+docker run -p 4000:4000 -d --rm 27fc95e5a3
